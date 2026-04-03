@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:8080/api/tournaments';
+const API_BASE_URL = import.meta.env.VITE_API_URL ? `${import.meta.env.VITE_API_URL}/tournaments` : 'https://cric-manager-backend.onrender.com/api/tournaments';
 
 export const tournamentService = {
   getAllTournaments: async () => {
